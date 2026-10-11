@@ -11,3 +11,4 @@ coverage/
 .local-postgres/
 .vscode/
 *.tsbuildinfo
+.vercel/

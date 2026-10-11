@@ -4,7 +4,8 @@ import { ApiError } from "../lib/errors";
 
 export const requireSameOrigin: RequestHandler = (request, response, next) => {
   const origin = request.get("origin");
-  if (origin && origin !== env.appOrigin) {
+  const deploymentOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
+  if (origin && origin !== env.appOrigin && origin !== deploymentOrigin) {
     return next(new ApiError(403, "This request did not come from the Lux Collection website."));
   }
   next();

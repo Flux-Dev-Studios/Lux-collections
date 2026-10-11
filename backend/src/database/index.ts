@@ -12,7 +12,8 @@ const databaseSsl = env.databaseSsl
 export const pool = new Pool({
   ...(env.databaseUrl ? { connectionString: env.databaseUrl } : {}),
   ...(databaseSsl ? { ssl: databaseSsl } : {}),
-  max: 10,
+  // Keep connection use bounded across concurrent Vercel function instances.
+  max: process.env.VERCEL ? 3 : 10,
   idleTimeoutMillis: 30_000,
   // Supabase free projects may need a few seconds to wake after being idle.
   connectionTimeoutMillis: 20_000,
