@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <meta name="description" content="Meet Lux Collection: an unusually personal way to hire an exceptional car. Create an account, complete your profile and discover your collection." />
+    <title>Lux Collection — Made for the way there</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body class="landing-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="header-inner container">
+        <a class="wordmark" href="#top" aria-label="Lux Collection home"><span class="wordmark-icon" aria-hidden="true">L</span><span class="wordmark-text">LUX<span>COLLECTION</span></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="#collection">The experience</a><a href="#difference">Our difference</a><a href="#how-it-works">How it works</a>
+        </nav>
+        <div class="header-actions"><a class="header-login" href="/login.html">Log in</a><a class="header-cta" href="/register.html">Join the collection <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-orb hero-orb-one" aria-hidden="true"></div><div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+        <div class="hero-inner container">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A MORE PERSONAL KIND OF DRIVE</p>
+            <h1 id="hero-title">Not just the<br />destination. <span>The feeling.</span></h1>
+            <p class="hero-description">Exceptional cars, thoughtful service, and the freedom to find your own way there. It starts with a hello.</p>
+            <div class="hero-actions"><a class="button button-primary" href="/register.html">Discover Lux Collection <span aria-hidden="true">↗</span></a><a class="text-link" href="#how-it-works"><span class="play-icon" aria-hidden="true">▶</span> How it works</a></div>
+            <div class="hero-proof"><span class="proof-spark" aria-hidden="true">✳</span><div><strong>A little more considered.</strong><span>Every car. Every handover. Every detail.</span></div></div>
+          </div>
+          <div class="hero-visual" aria-label="A midnight-blue luxury sports car">
+            <div class="hero-image-wrap"><img class="hero-car-image" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1500&amp;q=88" alt="A midnight-blue Porsche on an open road" fetchpriority="high" /><div class="image-vignette" aria-hidden="true"></div><div class="hero-car-caption"><span class="caption-label">THE JOURNEY IS YOURS</span><span class="caption-name">Make room for the road.</span><span class="caption-detail">Your next chapter starts here. <span aria-hidden="true">↗</span></span></div></div>
+            <div class="floating-note note-top"><span class="note-sparkle" aria-hidden="true">✳</span><span>Thoughtfully<br /><strong>handpicked.</strong></span></div>
+            <div class="floating-note note-bottom"><span class="note-icon" aria-hidden="true">✦</span><span>Delivered<br /><strong>where you are.</strong></span></div>
+            <div class="visual-index" aria-hidden="true"><span>01</span><i></i> 03</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-ribbon" aria-label="The Lux vehicle collection">
+        <div class="collection-ribbon-inner container">
+          <div class="collection-ribbon-count"><strong>163</strong><span>distinctive vehicles<br />to make your own</span></div>
+          <span class="collection-ribbon-divider" aria-hidden="true"></span>
+          <p>Find a car that feels like <em>you.</em><br /><small>From city-friendly electric drives to unforgettable weekends away.</small></p>
+          <a href="/register.html">Meet the collection <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="landing-fleet-section" id="vehicles" aria-labelledby="landing-fleet-title">
+        <div class="container">
+          <div class="fleet-showcase-heading">
+            <div>
+              <p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> THE COLLECTION</p>
+              <h2 id="landing-fleet-title">Find your <span>kind of drive.</span></h2>
+              <p>Scroll through a few favourites from the collection.</p>
+            </div>
+            <div class="fleet-showcase-actions">
+              <span class="fleet-auto-note"><i aria-hidden="true"></i> GLIDE THROUGH THE COLLECTION</span>
+              <button class="fleet-arrow" type="button" data-fleet-prev aria-label="Scroll to previous cars">&#8592;</button>
+              <button class="fleet-arrow" type="button" data-fleet-next aria-label="Scroll to next cars">&#8594;</button>
+            </div>
+          </div>
+          <div class="fleet-carousel" id="landing-fleet-grid" aria-label="Car collection, scrolls horizontally" tabindex="0">
+            <div class="fleet-carousel-track" data-fleet-track>
+              <p class="fleet-carousel-status">Loading the collection...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="welcome-section" id="collection">
+        <div class="welcome-card">
+          <div class="welcome-star" aria-hidden="true">✳</div>
+          <div class="welcome-copy"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> YOUR INVITATION</p><h2>The good part<br />starts <span>with you.</span></h2><p>Create your account and tell us a little about yourself. Once your profile is complete, the full car collection and booking experience are yours to explore.</p><a class="button button-light" href="/register.html">Create your Lux profile <span aria-hidden="true">→</span></a><a class="welcome-login" href="/login.html">Already a member? <span>Log in</span></a></div>
+          <div class="welcome-steps" aria-label="How to join">
+            <div class="welcome-step"><span>01</span><div><strong>Say hello.</strong><p>Create your secure account.</p></div><span class="welcome-check" aria-hidden="true">↗</span></div>
+            <div class="welcome-step"><span>02</span><div><strong>Make it yours.</strong><p>Complete your personal profile.</p></div><span class="welcome-check" aria-hidden="true">↗</span></div>
+            <div class="welcome-step"><span>03</span><div><strong>Find your feeling.</strong><p>Explore cars and request a drive.</p></div><span class="welcome-check" aria-hidden="true">↗</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience-section landing-experience" id="difference" aria-labelledby="experience-title">
+        <div class="experience-glow" aria-hidden="true"></div>
+        <div class="experience-inner container">
+          <div class="experience-copy"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> IT’S THE LITTLE THINGS</p><h2 id="experience-title">Different in<br />all the <span>right ways.</span></h2><p class="experience-description">Great cars are only the beginning. We make everything around the drive feel just as special.</p><a class="button button-light" href="/register.html">Get to know us <span aria-hidden="true">↗</span></a></div>
+          <div class="experience-grid">
+            <article class="experience-item"><span class="experience-number">01 / PERSONAL</span><span class="experience-icon" aria-hidden="true">✳</span><h3>Chosen, not collected.</h3><p>Every car earns its place. A small, considered collection, maintained to a standard you can feel.</p></article>
+            <article class="experience-item"><span class="experience-number">02 / EFFORTLESS</span><span class="experience-icon" aria-hidden="true">⌖</span><h3>We come to you.</h3><p>Home, hotel, terminal. Choose your drop-off and your car will be ready when life is.</p></article>
+            <article class="experience-item"><span class="experience-number">03 / HUMAN</span><span class="experience-icon" aria-hidden="true">↗</span><h3>People, not portals.</h3><p>Questions answered by real people, whenever you need us. Lovely service is the whole point.</p></article>
+            <article class="experience-item"><span class="experience-number">04 / STRAIGHTFORWARD</span><span class="experience-icon" aria-hidden="true">♡</span><h3>Nothing weird in the small print.</h3><p>Clear prices, a proper handover, and a reservation request reviewed by a real person.</p></article>
+          </div>
+        </div>
+        <span class="experience-watermark" aria-hidden="true">L</span>
+      </section>
+
+      <section class="how-section section-pad" id="how-it-works" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-heading how-heading"><div><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> NO DETOURS REQUIRED</p><h2 id="how-title">Three steps.<br /><span>Then, the open road.</span></h2></div><p class="how-intro">From your first hello to a request for your next drive, we have made the good part wonderfully simple.</p></div>
+          <div class="steps-grid">
+            <article class="step-card"><span class="step-number">01</span><div class="step-icon" aria-hidden="true">⌕</div><h3>Join the collection.</h3><p>Create your account. A few simple details help us make your experience feel personal.</p><span class="step-rule"></span></article>
+            <article class="step-card"><span class="step-number">02</span><div class="step-icon" aria-hidden="true">♡</div><h3>Find your feeling.</h3><p>Once your profile is complete, discover our handpicked cars and choose your favourite.</p><span class="step-rule"></span></article>
+            <article class="step-card"><span class="step-number">03</span><div class="step-icon" aria-hidden="true">↗</div><h3>Leave room for the road.</h3><p>Send us your dates. Our team will personally review and confirm your reservation request.</p><span class="step-rule"></span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" aria-label="The Lux Collection philosophy"><div class="quote-orb" aria-hidden="true"></div><div class="quote-inner container"><span class="quote-mark" aria-hidden="true">“</span><blockquote>The best trips aren’t just about where you are going. They’re about how you feel getting there.</blockquote><div class="quote-byline"><span class="quote-avatar" aria-hidden="true">L</span><span><strong>A note from Lux Collection</strong><span>Thoughtfully made for the way there</span></span></div></div></section>
+
+      <section class="closing-section"><div class="closing-inner container"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> THERE’S A SEAT WITH YOUR NAME ON IT</p><h2>Make a little<br /><span>room for the road.</span></h2><a class="button button-light" href="/register.html">Your story starts here <span aria-hidden="true">↗</span></a><span class="closing-spark" aria-hidden="true">✳</span></div></section>
+        <footer class="site-footer"><div class="footer-main container"><div class="footer-brand"><a class="wordmark wordmark-light" href="#top"><span class="wordmark-icon" aria-hidden="true">L</span><span class="wordmark-text">LUX<span>COLLECTION</span></span></a><p>Exceptional cars.<br />A more personal kind of drive.</p></div><div class="footer-column"><span class="footer-label">THE EXPERIENCE</span><a href="#collection">Your invitation</a><a href="#difference">Our difference</a><a href="#how-it-works">How it works</a></div><div class="footer-column"><span class="footer-label">YOUR ACCOUNT</span><a href="/login.html">Log in</a><a href="/register.html">Join the collection</a><a href="/my-bookings.html">Your reservations</a></div><div class="footer-newsletter"><span class="footer-label">A PERSONAL KIND OF SERVICE</span><p>From your first hello to the return of the keys, the details matter. We look forward to welcoming you.</p><a class="footer-contact-link" href="/register.html">Come and meet us <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom container"><span>© <span id="current-year"></span> LUX COLLECTION. MADE FOR THE WAY THERE.</span><a href="#top">BACK TO THE TOP ↑</a><span>MADE WITH A LITTLE MORE THOUGHT <span class="footer-heart">♥</span></span></div></footer>
+      <section class="service-faq section-pad" id="your-questions" aria-labelledby="faq-title">
+        <div class="container service-faq-inner">
+          <div><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> BEFORE YOU SET OFF</p><h2 id="faq-title">A few things<br /><span>worth knowing.</span></h2><p class="service-faq-intro">A considered experience starts with knowing what to expect. Here is how your Lux journey works.</p><a class="text-link" href="/register.html">Start your journey <span aria-hidden="true">→</span></a></div>
+          <div class="service-faq-list">
+            <details><summary>When is my reservation confirmed?</summary><p>Once you send a request, our team reviews the dates and vehicle. Your reservation is confirmed only when the team updates its status and you receive confirmation.</p></details>
+            <details><summary>When will I be asked to pay?</summary><p>Payment becomes available after your reservation is confirmed. You can pay the remaining balance in full, or choose a 50% payment or 20% deposit through secure Stripe Checkout.</p></details>
+            <details><summary>What happens after payment?</summary><p>Stripe securely processes your payment. We show a success message only after our server verifies the completed payment, and your reservation history reflects the amount received.</p></details>
+            <details><summary>Can I change my dates or pick-up point?</summary><p>Review your dates and pick-up location carefully before sending a request. For changes after submission, contact the Lux team through your reservation so they can review availability.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+  </body>
+</html>

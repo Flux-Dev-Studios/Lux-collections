@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Join the collection — Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <script src="auth.js" defer></script>
+  </head>
+  <body class="account-page auth-entry-page register-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="account-header container"><a class="wordmark" href="/"><span class="wordmark-icon" aria-hidden="true">L</span><span class="wordmark-text">LUX<span>COLLECTION</span></span></a><a class="account-back" href="/">← Back to the experience</a></header>
+    <main class="account-main" id="main">
+      <section class="account-card" aria-labelledby="account-title">
+        <a class="account-small-link" href="/login.html">ALREADY A MEMBER? <span>LOG IN ↗</span></a>
+        <p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> YOUR INVITATION</p>
+        <h1 id="account-title">It starts with <span>hello.</span></h1>
+        <p class="account-intro">Create an account. Complete your profile. Discover a more personal kind of drive.</p>
+        <form class="account-form" id="auth-form" data-mode="register" method="post" action="/api/auth/register">
+          <label for="auth-email">Email address</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required />
+          <label for="auth-password">Create a password</label><div class="password-field"><input id="auth-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="72" placeholder="At least 8 characters" required /><button class="password-toggle" type="button" data-toggle-password="auth-password" aria-label="Show password" aria-pressed="false">Show</button></div>
+          <span class="input-hint">Use at least 8 characters. Your password is never stored in plain text.</span>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="button button-primary account-submit" type="submit">Create your account <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="account-footnote">After creating your account, we’ll ask for just a few personal details before you can see the cars.</p>
+      </section>
+      <aside class="account-aside"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> A MORE THOUGHTFUL JOURNEY</p><blockquote>“The right car isn’t just how you get there. It’s how the journey feels.”</blockquote><div class="aside-points"><span>✳ Handpicked cars</span><span>⌖ Personal delivery</span><span>♡ A real person, whenever you need one</span></div></aside>
+    </main>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/">MADE FOR THE WAY THERE.</a></footer>
+  </body>
+</html>

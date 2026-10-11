@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Your collection — Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="site-nav.css" />
+    <script src="cars.js?v=20261010-1" defer></script>
+    <script src="site-nav.js" defer></script>
+  </head>
+  <body class="member-page site-nav-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="member-header container" id="site-side-nav">
+      <div class="site-nav-brand" aria-hidden="true"><span class="wordmark-text">LUX<span>COLLECTION</span></span></div>
+      <nav aria-label="Account navigation"><a class="member-current" href="/cars.html">The collection</a><a href="/my-bookings.html">My reservations</a><a href="/profile.html">My profile</a><button class="quiet-button" type="button" data-logout>Log out ↗</button></nav>
+    </header>
+    <button class="site-nav-reopen" id="site-nav-reopen" type="button" aria-controls="site-side-nav" aria-expanded="false" aria-label="Open navigation" hidden><span class="wordmark-icon" aria-hidden="true">L</span></button>
+    <main id="main">
+      <section class="catalogue-section section-pad" aria-label="Vehicle collection">
+        <div class="container">
+          <div class="catalogue-heading"><div><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> HANDPICKED, FOR YOU</p><h2>Meet your <span>next drive.</span></h2></div><p id="results-count" role="status" aria-live="polite"></p></div>
+          <form class="catalogue-filters" id="search-form">
+            <label for="search-q"><span class="field-label">FIND YOUR FEELING</span><input id="search-q" name="q" type="search" maxlength="80" placeholder="Try Porsche, electric, or Sunday drive…" /></label>
+            <label for="search-location"><span class="field-label">PICK-UP LOCATION</span><select id="search-location" name="location"><option>London</option><option>Manchester</option><option>Edinburgh</option><option>Birmingham</option></select></label>
+            <label for="search-from"><span class="field-label">PICK-UP DATE</span><input id="search-from" name="from" type="date" required /></label>
+            <label for="search-to"><span class="field-label">RETURN DATE</span><input id="search-to" name="to" type="date" required /></label>
+            <button class="button button-primary" type="submit">Find available cars <span aria-hidden="true">→</span></button>
+          </form>
+          <div class="catalogue-toolbar">
+            <div class="filter-list" role="group" aria-label="Filter vehicles by category">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All cars</button>
+              <button class="filter-button" type="button" data-filter="sport" aria-pressed="false">Sport</button>
+              <button class="filter-button" type="button" data-filter="suv" aria-pressed="false">SUV</button>
+              <button class="filter-button" type="button" data-filter="electric" aria-pressed="false">Electric</button>
+            </div>
+            <label class="sort-control"><span aria-hidden="true">↕</span><span class="sr-only">Sort cars by</span><select id="catalogue-sort" aria-label="Sort cars"><option value="featured">Curated for you</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></label>
+          </div>
+          <div class="fleet-grid catalogue-grid" id="cars-grid" aria-live="polite"></div>
+          <button class="button button-outline catalogue-load-more" id="cars-load-more" type="button" hidden>Show more cars <span aria-hidden="true">↓</span></button>
+          <div class="catalogue-message" id="catalogue-message" role="status" aria-live="polite" hidden></div>
+          <p class="catalogue-note">Availability and prices are confirmed personally by our team. All prices shown are in GBP per day.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="footer-bottom container"><span>© <span data-current-year></span> LUX COLLECTION. MADE FOR THE WAY THERE.</span><a href="/my-bookings.html">YOUR RESERVATIONS ↗</a><span>✦ MADE WITH A LITTLE MORE THOUGHT</span></div></footer>
+
+  </body>
+</html>

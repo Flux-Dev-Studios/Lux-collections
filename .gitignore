@@ -1,0 +1,13 @@
+node_modules/
+backend/node_modules/
+backend/dist/
+frontend/dist/
+.env
+.env.*
+!.env.example
+backend/certs/
+npm-debug.log*
+coverage/
+.local-postgres/
+.vscode/
+*.tsbuildinfo

@@ -1,0 +1,432 @@
+.header-login{font-size:11px;font-weight:600;color:#625b68}
+.welcome-login span{color:var(--purple)}
+.hero-proof{gap:12px}
+.proof-spark{width:28px;height:28px;display:grid;place-items:center;border:1px solid #c8d6ed;border-radius:50%;color:var(--purple);font-size:16px}
+.welcome-section{padding:40px var(--gutter) 65px;background:linear-gradient(180deg,#fff,#f7f9fd)}
+.welcome-card{position:relative;display:grid;grid-template-columns:.82fr 1.18fr;gap:65px;overflow:hidden;padding:45px 48px;border-radius:12px;background:var(--grad-booking);color:white;box-shadow:0 20px 50px rgb(39 68 111 / 18%)}
+.welcome-copy{position:relative;z-index:2}
+.welcome-copy .eyebrow{margin-bottom:15px}
+.welcome-copy h2{margin:0;font:500 39px/1.12 var(--font-display);letter-spacing:-.06em}
+.welcome-copy h2 span{color:#b8c8e5}
+.welcome-copy>p:not(.eyebrow){max-width:350px;margin:14px 0 18px;color:#e0e9f5;font-size:10px;line-height:1.85}
+.welcome-copy .button{min-height:41px}
+.welcome-login{display:block;margin-top:11px;color:#e0e9f5;font-size:9px}
+.welcome-login span{padding-left:4px;color:white;font-weight:700}
+.welcome-steps{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.welcome-step{display:grid;grid-template-columns:32px 1fr 25px;align-items:center;gap:12px;padding:13px 3px;border-bottom:1px solid rgb(255 255 255 / 17%)}
+.welcome-step:first-child{border-top:1px solid rgb(255 255 255 / 17%)}
+.welcome-step>span:first-child{color:#c4d2ec;font-size:9px;font-weight:700;letter-spacing:.09em}
+.welcome-step strong{font:600 13px var(--font-display)}
+.welcome-step p{margin:3px 0 0;color:#e0e9f5;font-size:9px}
+.welcome-check{color:#c4d2ec;text-align:right}
+.welcome-star{position:absolute;top:-105px;right:-55px;color:rgb(255 255 255 / 7%);font-size:260px;animation:slow-spin 70s linear infinite}
+.landing-experience .experience-inner{grid-template-columns:.78fr 1.22fr}
+.experience-copy h2{font-size:51px}
+
+.account-page{min-height:100vh;background:var(--grad-canvas)}
+.account-header,.member-header{display:flex;align-items:center;justify-content:space-between}
+.account-header{height:80px}
+.account-back{color:#746b7a;font-size:10px}
+.account-back:hover{color:var(--purple)}
+.auth-entry-page,.member-page{opacity:1;transition:opacity .15s ease,transform .15s ease}
+.auth-transitioning{opacity:0;transform:translateY(5px)}
+@media(prefers-reduced-motion:reduce){.auth-entry-page,.member-page{transition:none}}
+.account-main{display:grid;grid-template-columns:1fr .82fr;align-items:stretch;width:min(calc(100% - 48px),960px);min-height:590px;margin:37px auto 41px;overflow:hidden;border:1px solid #e8edf7;border-radius:14px;background:#fff;box-shadow:0 22px 75px rgb(39 68 111 / 9%)}
+.account-card{padding:34px clamp(28px,5vw,62px) 34px}
+.account-small-link{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:43px;color:#928999;font-size:7px;font-weight:700;letter-spacing:.12em}
+.account-small-link span{color:var(--purple);text-align:right}
+.account-card>.eyebrow{margin-bottom:14px;font-size:8px}
+.account-card h1,.profile-heading h1{margin:0;font:500 clamp(35px,5vw,48px)/1.1 var(--font-display);letter-spacing:-.065em}
+.account-card h1 span,.profile-heading h1 span,.catalogue-heading h2 span{color:var(--purple)}
+.account-intro{max-width:340px;margin:12px 0 24px;color:#77707d;font-size:11px;line-height:1.75}
+.account-form{display:flex;flex-direction:column;gap:8px}
+.account-form>label,.password-label label,.profile-form>label,.booking-dialog-content>label,.date-fields label{margin-top:5px;color:#4e4555;font-size:9px;font-weight:700}
+.account-form input,.profile-form>input,.booking-dialog-content>select,.date-fields input,.date-fields select{width:100%;height:43px;padding:0 12px;border:1px solid #e7e1eb;border-radius:5px;outline:none;background:#fdfcfe;color:var(--ink);font-size:11px;transition:border-color .2s,box-shadow .2s}
+.account-form .password-field{position:relative}
+.account-form .password-field input{padding-right:62px}
+.password-toggle{position:absolute;top:50%;right:10px;transform:translateY(-50%);padding:5px;border:0;background:transparent;color:var(--purple-dark);font-size:9px;font-weight:700;cursor:pointer}
+.password-toggle:hover{text-decoration:underline}
+.account-form input::placeholder,.profile-form>input::placeholder{color:#aaa2af}
+.account-form input:focus,.profile-form>input:focus,.booking-dialog-content>select:focus,.date-fields input:focus{border-color:#83a5d6;box-shadow:0 0 0 3px rgb(60 111 182 / 11%)}
+.password-label{display:flex;align-items:center;justify-content:space-between;margin-top:5px}
+.password-label a,.password-label span{color:#968d9b;font-size:8px}
+.password-label label{margin:0}
+.account-form .form-error{margin:3px 0 0}
+.account-submit{width:100%;min-height:45px;margin-top:9px;border:0;cursor:pointer}
+.account-submit:disabled{opacity:.68;cursor:wait}
+.account-submit[aria-busy=true] span{animation:float 1s ease-in-out infinite}
+.input-hint{color:#8b828f;font-size:8px;line-height:1.5}
+.account-footnote{margin:17px 0 0;color:#958c99;font-size:8px;line-height:1.7}
+.account-aside{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;overflow:hidden;padding:40px;background:var(--grad-experience);color:white}
+.account-aside:after{content:"L";position:absolute;z-index:-1;right:-21px;bottom:-91px;color:rgb(255 255 255 / 4%);font:800 330px/.8 var(--font-display)}
+.account-aside .eyebrow{font-size:8px}
+.account-aside blockquote{max-width:340px;margin:9px 0 24px;font:500 29px/1.3 var(--font-display);letter-spacing:-.05em}
+.account-aside .button{min-height:42px}
+.aside-points{display:flex;flex-direction:column;gap:13px;color:#e0e9f5;font-size:10px}
+.account-footer{display:flex;justify-content:space-between;padding-block:13px;border-top:1px solid #e6edf7;color:#89808f;font-size:7px;letter-spacing:.1em}
+.account-footer a{color:#71647c}
+.form-error{padding:10px 12px;border-left:2px solid #bb5269;border-radius:3px;background:#fff3f4;color:#8e3045;font-size:9px;line-height:1.6}
+.form-success{padding:10px 12px;border-left:2px solid #6c91c8;border-radius:3px;background:#edf3fc;color:#37649f;font-size:9px;line-height:1.6}
+
+.member-page{min-height:100vh;background:var(--grad-canvas)}
+.member-header{position:relative;z-index:10;min-height:77px}
+.member-header nav{display:flex;align-items:center;gap:24px}
+.member-header nav>a,.quiet-button{color:#716977;font-size:10px}
+.member-header nav>a:hover,.member-header nav>a.member-current{color:var(--purple-dark)}
+.member-header nav>a.member-current{font-weight:700}
+.quiet-button{padding:8px 10px;border:1px solid #e3dce8;border-radius:5px;background:transparent;cursor:pointer}
+.quiet-button:hover{border-color:var(--purple);color:var(--purple)}
+.profile-main{max-width:820px;min-height:calc(100vh - 150px);padding-block:63px 72px}
+.profile-heading{max-width:580px}
+.profile-heading .eyebrow{margin-bottom:14px}
+.profile-heading h1{font-size:46px}
+.profile-heading>p:last-child{max-width:525px;margin:12px 0 23px;color:#77707d;font-size:11px;line-height:1.8}
+.profile-progress{display:flex;align-items:center;gap:12px;margin:25px 0 26px;color:#82768d;font-size:7px;font-weight:700;letter-spacing:.12em}
+.progress-track{width:100px;height:4px;overflow:hidden;border:0;border-radius:4px;background:#e6edf8;accent-color:var(--purple)}
+.progress-track::-webkit-progress-bar{border-radius:4px;background:#e6edf8}
+.progress-track::-webkit-progress-value{border-radius:4px;background:var(--purple);transition:width .25s}
+.progress-track::-moz-progress-bar{border-radius:4px;background:var(--purple)}
+#progress-label{min-width:65px;color:#8e8594;font-size:8px;font-weight:500;letter-spacing:0}
+.profile-form{display:grid;gap:9px;padding:27px clamp(21px,5vw,40px) 28px;border:1px solid #e8edf7;border-radius:10px;background:#fff;box-shadow:0 10px 34px rgb(39 68 111 / 5%)}
+.form-section-intro{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:18px;border-bottom:1px solid #e8edf7}
+.form-section-intro>span{width:31px;height:31px;display:grid;place-items:center;border-radius:9px;background:var(--purple-light);color:var(--purple-dark);font-size:10px;font-weight:700}
+.form-section-intro h2{margin:0;font:700 14px var(--font-display)}
+.form-section-intro p{margin:4px 0 0;color:#817986;font-size:9px}
+.profile-form>input{max-width:410px}
+.profile-actions{display:grid;justify-items:start;gap:11px;margin-top:7px}
+.profile-form .account-submit{width:auto;min-width:230px}
+.profile-later{color:var(--purple);font-size:9px;font-weight:700}
+.privacy-note{margin:14px 0 0;color:#8a828e;font-size:9px;line-height:1.7}
+
+.cars-hero{position:relative;isolation:isolate;overflow:hidden;background:var(--grad-experience);color:white}
+.cars-hero-inner{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:240px;padding-block:42px}
+.cars-hero .eyebrow{margin-bottom:14px}
+.cars-hero h1{margin:0;font:500 clamp(39px,5vw,57px)/1.08 var(--font-display);letter-spacing:-.065em}
+.cars-hero h1 span{color:#b8c8e5}
+.cars-hero-inner>div>p:last-child{margin:12px 0 0;color:#d4c9dc;font-size:11px}
+.member-greeting{color:#ddcbea}
+.cars-hero-watermark{position:absolute;z-index:-1;right:45px;bottom:-82px;color:rgb(255 255 255 / 4%);font:800 310px/.8 var(--font-display)}
+.catalogue-section{padding-block:65px 76px}
+.catalogue-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.catalogue-heading .eyebrow{margin-bottom:12px}
+.catalogue-heading h2{margin:0;font:500 39px/1.1 var(--font-display);letter-spacing:-.06em}
+.catalogue-heading>p{color:#827988;font-size:9px}
+.catalogue-filters{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr auto;align-items:end;gap:10px;margin-top:23px;padding:15px;border:1px solid #e8edf7;border-radius:8px;background:white;box-shadow:0 7px 25px rgb(39 68 111 / 3%)}
+.catalogue-filters>label{display:grid;gap:5px}
+.catalogue-filters .field-label{color:#807387;font-size:7px;font-weight:700;letter-spacing:.12em}
+.catalogue-filters input,.catalogue-filters select{width:100%;height:37px;padding:0 8px;border:1px solid #e7e1eb;border-radius:4px;background:#fff;color:var(--ink);font-size:9px}
+.catalogue-filters .button{min-height:37px;gap:8px;padding-inline:12px;white-space:nowrap;font-size:9px}
+.catalogue-toolbar{display:flex;align-items:center;justify-content:space-between;margin:27px 0 14px;padding-bottom:12px;border-bottom:1px solid #e4ebf6}
+.catalogue-toolbar .filter-list{gap:5px}
+.catalogue-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));min-height:120px;gap:16px;overflow:visible;padding-bottom:12px}
+.catalogue-load-more{display:flex;margin:30px auto 0}
+.catalogue-load-more[hidden]{display:none}
+.member-car-card{transform-style:auto}
+.member-car-card[data-checkout-href]{cursor:pointer}
+.member-car-card[data-checkout-href]:focus-visible{outline:3px solid #5b82bb;outline-offset:3px}
+.member-car-card .car-image-link{height:205px}
+.member-car-card .car-card-content h3{margin:0;font:700 15px var(--font-display);letter-spacing:-.035em}
+.member-car-description{min-height:32px;margin:7px 0 4px;color:#776f7c;font-size:9px;line-height:1.7}
+.member-car-card .car-meta{min-height:22px;margin:7px 0}
+.member-car-card{border-color:#e6edf7;box-shadow:0 8px 26px rgb(51 35 66 / 4%)}
+.member-car-card .car-image-link{background:linear-gradient(135deg,#e9e2ed,#f6f3f7)}
+.member-car-card .car-card-content{padding:16px 17px 15px}
+.member-car-card .car-title-row h3{font-size:16px}
+.member-car-card .reserve-car{display:inline-flex;align-items:center;gap:8px;padding:9px 11px;border:1px solid #e5dce9;border-radius:5px;background:#fafbfe;transition:background .2s,color .2s,border-color .2s}
+.member-car-card .reserve-car:hover{border-color:#416eae;background:#2a4e83;color:#fff}
+.member-car-card .car-card-footer strong{font-size:19px}
+.catalogue-filters{border-color:#e6edf7;border-radius:9px;box-shadow:0 9px 30px rgb(39 68 111 / 4%)}
+.reserve-car{padding:0;border:0;background:transparent;cursor:pointer;font-family:var(--font-body)}
+.reserve-car:hover{color:#3c6fb6}
+.catalogue-message{padding:23px;text-align:center;color:#7b7083;font-size:11px}
+.catalogue-message.is-error{border-radius:7px;background:#fff3f4;color:#8e3045}
+.catalogue-note{margin:17px 0 0;color:#8b828f;font-size:8px}
+.booking-dialog{width:min(calc(100% - 32px),475px);max-height:min(92vh,800px);padding:0;overflow:auto;border:1px solid #e6edf7;border-radius:13px;background:#fff;box-shadow:0 24px 90px rgb(29 18 39 / 24%)}
+.booking-dialog::backdrop{background:rgb(31 22 40 / 56%);backdrop-filter:blur(4px)}
+.booking-dialog-content{position:relative;display:grid;gap:9px;padding:34px}
+.dialog-close{position:absolute;top:13px;right:14px;width:31px;height:31px;border:1px solid #e6edf7;border-radius:50%;background:white;color:#746b7a;font-size:19px;cursor:pointer}
+.dialog-close:hover{background:#eff4fc}
+.booking-dialog-content>.eyebrow{margin:0 0 3px;font-size:8px}
+.booking-dialog-content h2{margin:0;font:500 31px var(--font-display);letter-spacing:-.06em}
+.booking-dialog-content h2 span{color:var(--purple)}
+.dialog-car-name{margin:-3px 0 5px;color:#756c7b;font-size:11px}
+.booking-dialog-content>select{height:39px}
+.date-fields{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.date-fields>span{display:grid;gap:6px}
+.date-fields input{height:39px}
+.dialog-estimate{min-height:17px;margin:5px 0 0;color:var(--purple-dark);font-size:10px;font-weight:700}
+.booking-dialog-content .account-footnote{margin:5px 0 0}
+
+.booking-history-main{max-width:920px}
+.booking-history-list{display:grid;gap:12px;margin-top:26px}
+.booking-history-card{position:relative;display:grid;grid-template-columns:180px 1fr auto;align-items:center;gap:22px;min-height:156px;padding:14px;border:1px solid #e8edf7;border-radius:9px;background:#fff}
+.booking-history-card>img{width:180px;height:126px;object-fit:cover;border-radius:5px}
+.booking-history-copy h2{margin:7px 0 6px;font:700 15px var(--font-display)}
+.booking-history-copy>p{margin:3px 0;color:#77707d;font-size:9px}
+.booking-history-copy>p span{padding:0 6px;color:#ad94c0}
+.booking-history-copy>strong{display:block;margin-top:9px;color:var(--ink);font:800 15px var(--font-display)}
+.booking-history-copy>strong span{color:#877e8c;font:400 8px var(--font-body)}
+.booking-status{display:inline-flex;align-items:center;gap:6px;font-size:8px;font-weight:700}
+.booking-status i{width:6px;height:6px;border-radius:50%}
+.status-pending{color:#856328}
+.status-pending i{background:#d8ad53}
+.status-cancelled{color:#807684}
+.status-cancelled i{background:#aaa2ae}
+.status-confirmed{color:#4f7fb7}
+.status-confirmed i{background:#6696cc}
+.status-active{color:#4c79bb}
+.status-active i{background:#668cca}
+.status-completed{color:#496d9d}
+.status-completed i{background:#708cba}
+.status-rejected{color:#aa5862}
+.status-rejected i{background:#c36f79}
+.cancel-reservation{align-self:end;padding:8px 10px;border:1px solid #eadfe2;border-radius:5px;background:white;color:#875560;font-size:8px;cursor:pointer}
+.cancel-reservation:hover{border-color:#c67e91;background:#fff8fa}
+.cancel-reservation:disabled{opacity:.6}
+.booking-payment{grid-column:2/-1;display:flex;flex-wrap:wrap;align-items:end;gap:9px;padding-top:10px;border-top:1px solid #f0ecf2}
+.booking-payment p{flex-basis:100%;margin:0;color:#615b66;font-size:9px}
+.booking-payment label{display:grid;gap:4px;color:#827986;font-size:8px}
+.booking-payment select{min-height:34px;padding:6px 8px;border:1px solid #e5dfe9;border-radius:5px;background:#fff;color:#403749;font-size:9px}
+.pay-reservation{min-height:34px;padding:8px 12px;border:0;border-radius:5px;background:#2a4e83;color:#fff;font-size:9px;font-weight:700;cursor:pointer}
+.pay-reservation:disabled{opacity:.55;cursor:wait}
+.payment-receipt{grid-column:2/-1;margin:0;color:#4772ae;font-size:9px;font-weight:700}
+.payment-success-dialog{width:min(440px,calc(100% - 32px));padding:34px;border:1px solid #e6e9f0;border-radius:18px;color:#26344a;box-shadow:0 24px 90px rgb(19 35 56 / 25%)}
+.payment-success-dialog::backdrop{background:rgb(16 27 44 / 58%);backdrop-filter:blur(4px)}
+.payment-success-mark{display:grid;place-items:center;width:48px;height:48px;margin-bottom:20px;border-radius:50%;background:#e9f6ef;color:#2a8a55;font-size:27px;font-weight:700}
+.payment-success-dialog h2{margin:8px 0;font:800 27px var(--font-display);letter-spacing:-.04em}
+.payment-success-dialog>p:not(.eyebrow){color:#68778b;font-size:13px;line-height:1.6}
+.payment-success-dialog .payment-success-amount{color:#26344a;font-weight:700}
+.payment-success-dialog .button{margin-top:12px}
+@media(max-width:480px){.payment-success-dialog{padding:25px}}
+.booking-confirmation{margin:0;padding:14px;border-left:2px solid #6c91c8;border-radius:5px;background:#edf3fc;color:#37649f;font-size:10px}
+.empty-bookings{display:grid;justify-items:center;padding:51px 20px;border:1px solid #e8edf7;border-radius:9px;background:white;text-align:center}
+.empty-bookings>span{color:var(--purple);font-size:26px}
+.empty-bookings h2{margin:10px 0 5px;font:600 20px var(--font-display)}
+.empty-bookings p{margin:0 0 17px;color:#79717d;font-size:10px}
+.empty-bookings .button{min-height:40px}
+
+.footer-contact-link{display:inline-flex;align-items:center;gap:8px;color:#f0e8f5;font-size:9px;font-weight:700}
+.footer-contact-link:hover{color:#abc2e8}
+
+@media(max-width:1000px){
+  .welcome-card{gap:35px;padding:36px}
+  .catalogue-filters{grid-template-columns:1.3fr 1fr 1fr 1fr}
+  .catalogue-filters>.button{grid-column:1/-1;justify-self:start}
+  .member-car-card .car-image-link{height:175px}
+}
+@media(max-width:720px){
+  .welcome-card{grid-template-columns:1fr;gap:22px;padding:28px}
+  .welcome-copy h2{font-size:35px}
+  .account-main{grid-template-columns:1fr;width:min(calc(100% - 32px),490px);margin-block:18px 25px}
+  .account-card{padding:28px}
+  .account-small-link{margin-bottom:30px}
+  .account-aside{min-height:238px;padding:27px}
+  .account-aside blockquote{font-size:25px}
+  .account-footer{width:calc(100% - 32px)}
+  .member-header{min-height:67px}
+  .member-header nav{gap:12px}
+  .member-header nav>a,.quiet-button{font-size:8px}
+  .quiet-button{padding:7px}
+  .member-header .wordmark-text{font-size:12px}
+  .member-header .wordmark-icon{width:30px;height:30px}
+  .profile-main{padding-block:45px}
+  .profile-heading h1{font-size:38px}
+  .catalogue-section{padding-block:45px}
+  .cars-hero-inner{min-height:195px}
+  .catalogue-heading h2{font-size:32px}
+  .catalogue-filters{grid-template-columns:1fr 1fr}
+  .catalogue-filters>label:first-child{grid-column:1/-1}
+  .catalogue-filters>.button{grid-column:1/-1}
+  .member-car-card .car-image-link{height:clamp(145px,27vw,195px)}
+  .booking-history-card{grid-template-columns:125px 1fr;gap:13px}
+  .booking-history-card>img{width:125px;height:125px}
+  .cancel-reservation{grid-column:2;justify-self:start}
+}
+@media(max-width:460px){
+  .header-actions{gap:7px}
+  .header-login{font-size:8px}
+  .header-actions .header-cta{gap:5px;font-size:7px}
+  .welcome-section{padding:24px var(--gutter) 44px}
+  .welcome-card{padding:23px}
+  .welcome-copy>p:not(.eyebrow){font-size:9px}
+  .welcome-step strong{font-size:12px}
+  .member-header{flex-wrap:wrap;gap:8px;padding-block:10px}
+  .member-header nav{width:100%;justify-content:space-between;gap:5px}
+  .member-header nav>a,.quiet-button{font-size:8px}
+  .member-header nav>a:first-child{display:none}
+  .profile-main{padding-block:34px}
+  .profile-heading h1{font-size:34px}
+  .form-section-intro p{font-size:8px}
+  .catalogue-heading h2{font-size:28px}
+  .catalogue-toolbar{gap:5px}
+  .catalogue-toolbar .filter-list{gap:0}
+  .catalogue-toolbar .filter-button{padding-inline:7px;font-size:8px}
+  .catalogue-toolbar .sort-control select{max-width:91px;font-size:8px}
+  .catalogue-grid{grid-template-columns:1fr}
+  .member-car-card .car-image-link{height:220px}
+  .member-car-card .car-title-row h3{font-size:14px}
+  .booking-dialog-content{padding:27px 21px}
+  .booking-history-card{grid-template-columns:92px 1fr;gap:10px;padding:10px}
+  .booking-history-card>img{width:92px;height:108px}
+  .booking-history-copy h2{font-size:12px}
+  .booking-history-copy>p{font-size:8px}
+  .footer-bottom span:last-child{display:none}
+}
+
+.catalogue-section{padding-top:30px}
+.catalogue-heading{align-items:flex-end}
+.catalogue-heading>p{flex:none;margin:0 0 7px;text-align:right;white-space:nowrap}
+.catalogue-heading{position:relative;overflow:hidden;margin-inline:0;padding:17px 22px;border-radius:8px;background:linear-gradient(110deg,#1a2c45,#31558b);box-shadow:0 8px 24px rgb(53 34 68 / 12%)}
+.catalogue-heading .eyebrow{color:#c4d2ec}
+.catalogue-heading .eyebrow-line{background:#9eb7df}
+.catalogue-heading h2{color:#fff}
+.catalogue-heading h2 span{color:#d5b8ed}
+.catalogue-heading>p{color:#e3d8eb}
+@media(max-width:720px){.catalogue-section{padding-top:22px}.catalogue-heading{padding:14px 15px}.catalogue-heading h2{font-size:25px}.catalogue-heading>p{font-size:7px}}
+
+/* More compact vehicle cards keep the collection easy to scan. */
+.member-car-card .car-image-link{height:130px}
+.member-car-card .car-card-content{padding:10px 13px 10px}
+.member-car-card .car-card-content h3{font-size:14px}
+.member-car-card .car-meta{min-height:0;margin:5px 0;font-size:7px}
+.member-car-card .car-card-footer{padding-top:6px}
+.member-car-card .car-card-footer strong{font-size:16px}
+.member-car-card .reserve-car{padding:6px 8px;font-size:8px}
+@media(max-width:720px){.member-car-card .car-image-link{height:120px}}
+@media(max-width:460px){.catalogue-grid{grid-template-columns:1fr}.member-car-card .car-image-link{height:150px}}
+.catalogue-grid .member-car-card .car-image-link{height:clamp(190px,30vh,320px)}
+
+/* Account forms keep their header and footer still while the form panel scrolls. */
+.account-page:not(.site-nav-page){height:100vh;height:100dvh;min-height:0;overflow:hidden}
+.account-page:not(.site-nav-page) #main.account-main{min-height:0;max-height:100%;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable}
+
+/* Keep the complete sign-up and login screens in the initial viewport. */
+.auth-entry-page{display:flex;flex-direction:column;height:100vh;height:100dvh;min-height:0;overflow:hidden}
+.auth-entry-page .account-header{height:62px;flex:none}
+.auth-entry-page .account-main{flex:1;min-height:0;width:min(calc(100% - 48px),960px);margin:8px auto 14px;overflow:hidden}
+.auth-entry-page .account-card{padding:24px clamp(28px,5vw,54px)}
+.auth-entry-page .account-small-link{margin-bottom:23px}
+.auth-entry-page .account-card>.eyebrow{margin-bottom:9px}
+.auth-entry-page .account-intro{margin:8px 0 16px}
+.auth-entry-page .account-form{gap:6px}
+.auth-entry-page .account-form input{height:40px}
+.auth-entry-page .account-footnote{margin-top:12px}
+.auth-entry-page .account-aside{padding:30px}
+.auth-entry-page .account-aside blockquote{font-size:clamp(22px,2.5vw,28px);margin:8px 0 17px}
+.auth-entry-page .aside-points{gap:9px}
+.auth-entry-page .account-footer{flex:none}
+.register-page .account-main{grid-template-columns:1.02fr .78fr}
+.register-page .account-card{display:flex;flex-direction:column;justify-content:center;gap:0;padding:clamp(22px,3.5vh,38px) clamp(28px,4vw,50px);background:#fff}
+.register-page .account-small-link{margin-bottom:19px}
+.register-page .account-card>.eyebrow{margin-bottom:7px}
+.register-page .account-card h1{font-size:clamp(36px,4vw,44px)}
+.register-page .account-intro{margin:8px 0 14px;line-height:1.6}
+.register-page .account-form{gap:6px}
+.register-page .account-form>label{margin-top:3px}
+.register-page .account-form input{height:42px}
+.register-page .account-submit{min-height:44px;margin-top:8px}
+.register-page .account-footnote{max-width:360px;margin-top:12px}
+.login-page .account-main{grid-template-columns:1.02fr .78fr}
+.login-page .account-card{display:flex;flex-direction:column;justify-content:center;gap:0;padding:clamp(22px,3.5vh,38px) clamp(28px,4vw,50px);background:#fff}
+.login-page .account-small-link{margin-bottom:19px}
+.login-page .account-card>.eyebrow{margin-bottom:7px}
+.login-page .account-card h1{font-size:clamp(36px,4vw,44px)}
+.login-page .account-intro{margin:8px 0 14px;line-height:1.6}
+.login-page .account-form{gap:6px}
+.login-page .account-form>label{margin-top:3px}
+.login-page .account-form input{height:42px}
+.login-page .account-submit{min-height:44px;margin-top:8px}
+.login-page .account-footnote{max-width:360px;margin-top:12px}
+@media(max-width:720px){
+  .auth-entry-page .account-header{height:56px}
+  .auth-entry-page .account-main{width:min(calc(100% - 28px),490px);margin:6px auto 9px}
+  .auth-entry-page .account-card{padding:19px 23px}
+  .auth-entry-page .account-small-link{margin-bottom:17px}
+  .auth-entry-page .account-card h1{font-size:36px}
+  .auth-entry-page .account-intro{margin-bottom:11px}
+  .auth-entry-page .account-aside{min-height:0;padding:14px 20px}
+  .auth-entry-page .account-aside blockquote{font-size:19px;margin:5px 0 8px}
+  .auth-entry-page .account-aside .eyebrow{margin:0}
+  .auth-entry-page .aside-points{display:none}
+  .auth-entry-page .account-footer{width:calc(100% - 28px)}
+  .register-page .account-main{grid-template-columns:1fr}
+  .register-page .account-card{padding:19px 23px}
+  .login-page .account-main{grid-template-columns:1fr}
+  .login-page .account-card{padding:19px 23px}
+}
+@media(max-height:700px){
+  .auth-entry-page .account-header{height:48px}
+  .auth-entry-page .account-main{margin-block:4px 7px}
+  .auth-entry-page .account-card{padding-block:14px}
+  .auth-entry-page .account-small-link{margin-bottom:12px}
+  .auth-entry-page .account-card h1{font-size:34px}
+  .auth-entry-page .account-intro{margin:6px 0 9px}
+  .auth-entry-page .account-form{gap:4px}
+  .auth-entry-page .account-form input{height:36px}
+  .auth-entry-page .account-submit{min-height:39px;margin-top:5px}
+  .auth-entry-page .account-footnote{margin-top:8px}
+  .auth-entry-page .account-aside{padding-block:10px}
+  .auth-entry-page .account-aside .eyebrow{font-size:7px}
+  .auth-entry-page .account-aside blockquote{font-size:17px;margin:3px 0}
+}
+@media(max-height:620px){
+  .auth-entry-page .account-aside{display:none}
+}
+
+/* New members complete their profile in a blocking onboarding overlay. */
+.profile-page.profile-onboarding .member-header,.profile-page.profile-onboarding .site-nav-reopen,.profile-page.profile-onboarding .account-footer{display:none}
+.profile-page .profile-main{width:100%;max-width:none;min-height:0;margin:0;padding:0}
+.profile-page.profile-onboarding .profile-main{position:fixed;inset:0;z-index:200;display:grid;place-items:center;overflow:auto;padding:88px 20px 28px;background:radial-gradient(ellipse at 80% 16%,rgb(143 178 222 / 26%),transparent 34%),radial-gradient(ellipse at 12% 82%,rgb(194 174 212 / 22%),transparent 36%),linear-gradient(135deg,#f3f6fb,#e8edf6 58%,#f5f3f8)}
+.profile-card{width:min(100%,760px);padding:clamp(22px,4vw,42px);border:1px solid rgb(255 255 255 / 88%);border-radius:20px;background:#fff;box-shadow:0 28px 90px rgb(34 49 74 / 16%)}
+.profile-card-heading{display:flex;align-items:center;gap:20px}
+.profile-avatar{display:grid;flex:none;place-items:center;width:70px;height:70px;border:1px solid #d9e3f1;border-radius:50%;background:linear-gradient(145deg,#edf3fb,#e8e5f0);color:#335683;font:700 22px var(--font-display)}
+.profile-card .profile-heading{max-width:none}
+.profile-card .profile-heading .eyebrow{margin-bottom:9px}
+.profile-card .profile-heading h1{font-size:clamp(32px,4vw,42px)}
+.profile-card .profile-heading>p:last-child{margin:7px 0 0;font-size:10px}
+.profile-email-row{display:flex;align-items:center;gap:12px;margin-top:25px;padding:13px 15px;border:1px solid #e8edf5;border-radius:8px;background:#f8fafd}
+.profile-email-row>span:first-child{color:#827b8b;font-size:7px;font-weight:700;letter-spacing:.1em}
+.profile-email-row strong{overflow:hidden;color:#263a54;font-size:10px;font-weight:600;text-overflow:ellipsis}
+.profile-email-type{margin-left:auto;color:#7b8ea8;font-size:7px;font-weight:700;letter-spacing:.09em;white-space:nowrap}
+.profile-card .profile-progress{margin:19px 0 0}
+.profile-card .profile-progress>span:first-child{white-space:nowrap}
+.profile-card .progress-track{flex:1}
+.profile-card .profile-form{gap:10px;padding:20px 0 0;border:0;border-top:1px solid #e8edf5;border-radius:0;background:transparent;box-shadow:none}
+.profile-card .form-section-intro{margin:0 0 3px;padding-bottom:14px}
+.profile-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 16px}
+.profile-fields label{display:grid;gap:7px;color:#4e4555;font-size:9px;font-weight:700}
+.profile-fields label:first-child{grid-column:1/-1}
+.profile-fields input{width:100%;height:43px;padding:0 12px;border:1px solid #e1e7ef;border-radius:6px;outline:none;background:#fff;color:var(--ink);font:400 11px var(--font-body);transition:border-color .2s,box-shadow .2s}
+.profile-fields input:focus{border-color:#83a5d6;box-shadow:0 0 0 3px rgb(60 111 182 / 11%)}
+.profile-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:4px}
+.profile-card .profile-actions .account-submit{width:auto;min-width:210px;min-height:44px;margin:0}
+.profile-save-status{color:#3f745c;font-size:9px}
+.profile-card .privacy-note{margin-top:18px;padding-top:14px;border-top:1px solid #edf0f5;font-size:8px}
+.profile-page.profile-complete .profile-main{max-width:850px;min-height:0;margin:0 auto;padding:clamp(28px,5vw,58px) 24px}
+.profile-page.profile-complete .profile-card{width:100%;padding:clamp(22px,4vw,38px);border-color:#e8edf7;border-radius:14px;box-shadow:0 10px 34px rgb(39 68 111 / 5%)}
+@media(max-width:720px){
+  .profile-page.profile-onboarding .profile-main{align-content:center;padding:78px 14px 18px}
+  .profile-card{padding:22px 19px;border-radius:15px}
+  .profile-card-heading{gap:13px}
+  .profile-avatar{width:54px;height:54px;font-size:18px}
+  .profile-card .profile-heading h1{font-size:31px}
+  .profile-email-row{gap:8px;margin-top:19px;padding:11px}
+  .profile-email-row strong{font-size:9px}
+  .profile-fields{grid-template-columns:1fr;gap:10px}
+  .profile-fields label:first-child{grid-column:auto}
+  .profile-card .profile-progress{gap:8px}
+  .profile-card .profile-progress>span:first-child{font-size:6px}
+  .profile-card .profile-actions .account-submit{width:100%}
+  .profile-page.profile-complete .profile-main{padding:26px 14px}
+}
+@media(max-height:650px){
+  .profile-page.profile-onboarding .profile-main{place-items:start center;padding-top:76px}
+  .profile-page.profile-onboarding .profile-card{margin-block:auto}
+  .profile-card{padding-block:20px}
+  .profile-card .profile-progress{margin-top:13px}
+  .profile-card .profile-form{padding-top:13px}
+  .profile-card .privacy-note{margin-top:11px;padding-top:10px}
+}
+
+
+.profile-page.profile-complete .member-header nav{margin-top:14px}

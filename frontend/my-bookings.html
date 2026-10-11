@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Your reservations — Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="site-nav.css" />
+    <script src="bookings.js" defer></script>
+    <script src="site-nav.js" defer></script>
+  </head>
+  <body class="member-page site-nav-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="member-header container" id="site-side-nav"><div class="site-nav-brand" aria-hidden="true"><span class="wordmark-text">LUX<span>COLLECTION</span></span></div><nav aria-label="Account navigation"><a href="/cars.html">The collection</a><a class="member-current" href="/my-bookings.html">My reservations</a><a href="/profile.html">My profile</a><button class="quiet-button" type="button" data-logout>Log out ↗</button></nav></header>
+    <button class="site-nav-reopen" id="site-nav-reopen" type="button" aria-controls="site-side-nav" aria-expanded="false" aria-label="Open navigation" hidden><span class="wordmark-icon" aria-hidden="true">L</span></button>
+    <main class="profile-main booking-history-main container" id="main">
+      <div class="profile-heading"><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> ALL THE GOOD PLANS</p><h1>Your <span>reservations.</span></h1><p>Reservation requests and confirmed drives, all in one place.</p></div>
+      <div class="booking-history-list" id="booking-list" aria-live="polite"><p class="catalogue-message">Gathering up your plans…</p></div>
+    </main>
+    <dialog class="payment-success-dialog" id="payment-success-dialog" aria-labelledby="payment-success-title" aria-describedby="payment-success-copy">
+      <div class="payment-success-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> SECURE CHECKOUT</p>
+      <h2 id="payment-success-title">Payment successful</h2>
+      <p id="payment-success-copy" role="status">Your payment has been confirmed by Stripe. Your reservation details are below.</p>
+      <p class="payment-success-amount" id="payment-success-amount"></p>
+      <button class="button button-primary" id="payment-success-close" type="button">View my reservation</button>
+    </dialog>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/cars.html">BACK TO YOUR COLLECTION ↗</a></footer>
+  </body>
+</html>

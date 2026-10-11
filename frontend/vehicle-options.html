@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Choose your vehicle version | Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="vehicle-options.css" />
+    <link rel="stylesheet" href="site-nav.css" />
+    <script src="vehicle-options.js?v=20261010-1" defer></script>
+    <script src="site-nav.js" defer></script>
+  </head>
+  <body class="member-page vehicle-options-page site-nav-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="member-header container" id="site-side-nav">
+      <div class="site-nav-brand" aria-hidden="true"><span class="wordmark-text">LUX<span>COLLECTION</span></span></div>
+      <nav aria-label="Account navigation"><a href="/cars.html">The collection</a><a href="/my-bookings.html">My reservations</a><a href="/profile.html">My profile</a><button class="quiet-button" type="button" data-logout>Log out</button></nav>
+    </header>
+    <button class="site-nav-reopen" id="site-nav-reopen" type="button" aria-controls="site-side-nav" aria-expanded="false" aria-label="Open navigation" hidden><span class="wordmark-icon" aria-hidden="true">L</span></button>
+    <main class="options-main container" id="main">
+      <a class="checkout-back" id="options-back" href="/cars.html">← Back to reservation details</a>
+      <header class="options-heading"><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> STEP 03 · YOUR VEHICLE</p><h1>Choose your <span>version.</span></h1><p>Compare the available designs and specifications, then send your reservation request.</p></header>
+      <p class="options-error form-error" id="options-error" role="alert" hidden></p>
+      <section class="options-vehicle" aria-labelledby="options-car-name">
+        <div class="options-hero-image" id="options-image"><span aria-hidden="true">L</span></div>
+        <div class="options-hero-copy"><p class="summary-make" id="options-make">YOUR SELECTION</p><h2 id="options-car-name">Loading your vehicle…</h2><p id="options-description"></p><div class="options-rental-summary"><span id="options-dates"></span><span id="options-location"></span></div></div>
+      </section>
+      <form id="options-form">
+        <div class="options-section-heading"><div><p class="eyebrow eyebrow-purple">AVAILABLE VERSIONS</p><h2>Choose a design and specification</h2><p>Performance and equipment details are provided by our fleet team.</p></div></div>
+        <div class="options-empty" id="options-empty" hidden>No additional versions have been configured for this vehicle yet. You can continue with the current listing and its published specifications.</div>
+        <div class="options-grid" id="options-grid" role="radiogroup" aria-label="Vehicle versions"></div>
+        <p class="options-error form-error" id="options-submit-error" role="alert" hidden></p>
+        <div class="options-actions"><a class="button button-secondary" id="options-edit-dates" href="#">Edit dates and location</a><button class="button button-primary" id="options-submit" type="submit" disabled>Send reservation request <span aria-hidden="true">→</span></button></div>
+      </form>
+    </main>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/my-bookings.html">YOUR RESERVATIONS →</a></footer>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+:root {
+  color-scheme: light;
+  --ink: #1c2738;
+  --ink-soft: #5d6b80;
+  --ink-faint: #8c98ab;
+  --paper: #fff;
+  --canvas: #f7f9fd;
+  --grad-canvas: linear-gradient(132deg, #fbfcff 0%, #f2f6fc 52%, #f7f9fd 100%);
+  --line: #e3eaf4;
+  --purple: #3c6fb6;
+  --purple-dark: #284f86;
+  --purple-deep: #18263c;
+  --purple-light: #e9f0fb;
+  --lilac: #abc2e8;
+  --coral: #d59b76;
+  --mint: #b7c9e8;
+  --grad-hero: linear-gradient(128deg, #f7f9fd 0%, #eff4fc 56%, #e3ebf8 100%);
+  --grad-fleet: linear-gradient(135deg, #fafbfe, #eff4fc);
+  --grad-booking: linear-gradient(115deg, #244675 0%, #3c6fb6 54%, #6c91cc 100%);
+  --grad-experience: linear-gradient(125deg, #18263c 0%, #20375c 52%, #385b95 100%);
+  --grad-testimonials: linear-gradient(135deg, #f2f6fc 0%, #e8effb 55%, #f7ebe5 100%);
+  --shadow-card: 0 18px 48px rgb(39 68 111 / 8%);
+  --shadow-lift: 0 24px 56px rgb(39 68 111 / 18%);
+  --shadow-button: 0 9px 24px rgb(39 68 111 / 23%);
+  --radius-small: 12px;
+  --radius-card: 20px;
+  --radius-large: 28px;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+  --font-display: "Manrope", "Segoe UI", sans-serif;
+  --container: 1192px;
+  --gutter: clamp(20px, 5.4vw, 76px);
+  --ease-out: cubic-bezier(.2, .75, .25, 1);
+}

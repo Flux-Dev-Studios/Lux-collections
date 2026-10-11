@@ -1,0 +1,18 @@
+{
+  "name": "lux-collection",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A premium car-hire site with account-gated vehicle browsing and a PostgreSQL backend.",
+  "scripts": {
+    "dev": "npm --prefix backend run dev:watch",
+    "start": "npm --prefix backend start",
+    "seed": "npm --prefix backend run seed",
+    "migrate": "npm --prefix backend run migrate",
+    "db:watch": "npm --prefix backend run db:watch",
+    "test": "npm --prefix backend test",
+    "build": "npm --prefix backend run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

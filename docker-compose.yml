@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: lux_collection
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: lux_local_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - lux_collection_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d lux_collection"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  lux_collection_pgdata:

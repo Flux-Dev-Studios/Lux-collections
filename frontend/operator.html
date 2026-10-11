@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171923" />
+    <title>Operations | Lux Collection</title>
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="operator.css" />
+    <script src="operator.js" defer></script>
+  </head>
+  <body class="ops-page">
+    <div class="ops-shell">
+      <aside class="ops-sidebar">
+        <a class="ops-brand" href="/"><span class="brand-mark">L</span><span>LUX <i>FLEET DESK</i></span></a>
+        <p class="nav-caption">WORKSPACE</p>
+        <nav class="ops-nav" aria-label="Operations menu">
+          <button class="is-active" type="button" data-panel="overview" aria-pressed="true"><span>◫</span> Overview</button>
+          <button type="button" data-panel="bookings" aria-pressed="false"><span>▤</span> Reservations <b id="pending-count">0</b></button>
+          <button type="button" data-panel="fleet" aria-pressed="false"><span>▱</span> Fleet</button>
+          <button type="button" data-panel="customers" aria-pressed="false"><span>♙</span> Customers</button>
+        </nav>
+        <div class="sidebar-bottom"><span class="live-dot"></span> Fleet sync active <button id="logout-button">Sign out</button></div>
+      </aside>
+      <main class="ops-main">
+        <header class="ops-topbar"><div><p class="eyebrow">LUX COLLECTION / OPERATIONS</p><h1 id="page-title">Good morning</h1></div><div class="operator-chip"><span class="operator-avatar">L</span><span><strong id="operator-name">Operator</strong><small>Fleet operations</small></span></div></header>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <section class="panel is-visible" id="panel-overview">
+          <div class="section-title"><div><h2>Today at a glance</h2><p>Your fleet and reservations, all in one place.</p></div><span class="today-label" id="today-label"></span></div>
+          <div class="metric-grid">
+            <article class="metric-card"><span class="metric-icon violet">▱</span><span class="metric-label">FLEET VEHICLES</span><strong id="metric-fleet">—</strong><small><i id="metric-available">—</i> ready to rent</small></article>
+            <article class="metric-card"><span class="metric-icon amber">◷</span><span class="metric-label">NEEDS YOUR REVIEW</span><strong id="metric-review">—</strong><small>Reservation requests</small></article>
+            <article class="metric-card"><span class="metric-icon blue">↗</span><span class="metric-label">CURRENTLY ON RENTAL</span><strong id="metric-active">—</strong><small>Vehicles out with customers</small></article>
+            <article class="metric-card"><span class="metric-icon green">£</span><span class="metric-label">BOOKED VALUE</span><strong id="metric-value">—</strong><small>Confirmed and completed rentals</small></article>
+          </div>
+          <article class="ops-card"><div class="card-heading"><div><h2>Latest reservations</h2><p>Recent activity across your fleet</p></div><button class="text-action" data-goto="bookings">All reservations <span>→</span></button></div><div class="table-wrap"><table><thead><tr><th>GUEST</th><th>VEHICLE</th><th>DATES</th><th>VALUE</th><th>STATUS</th></tr></thead><tbody id="recent-table"></tbody></table></div></article>
+          <article class="ops-card fleet-health"><div class="card-heading"><div><h2>Fleet readiness</h2><p>Keep vehicles available, safe and ready for the next journey.</p></div><button class="text-action" data-goto="fleet">Manage fleet <span>→</span></button></div><div class="readiness"><div><span>Available</span><strong id="ready-count">—</strong></div><div class="readiness-track"><i id="readiness-bar"></i></div><span id="readiness-caption">Loading fleet status</span></div></article>
+        </section>
+        <section class="panel" id="panel-bookings"><div class="section-title"><div><h2>Reservations</h2><p>Review requests and keep each rental moving.</p></div><span class="pill" id="booking-total">0 reservations</span></div><article class="ops-card"><div class="table-wrap"><table><thead><tr><th>GUEST</th><th>VEHICLE</th><th>DATES & PICKUP</th><th>VALUE</th><th>STATUS / ACTION</th></tr></thead><tbody id="bookings-table"></tbody></table></div></article></section>
+        <section class="panel" id="panel-fleet"><div class="section-title"><div><h2>Your fleet</h2><p>Update vehicle availability and day rates.</p></div><span class="pill" id="fleet-total">0 vehicles</span></div>
+          <div class="fleet-toolbar"><label class="fleet-search"><span>Search fleet</span><input id="fleet-search" type="search" placeholder="Make, model, registration or location" autocomplete="off" /></label><label class="fleet-status-filter"><span>Show</span><select id="fleet-filter"><option value="all">All vehicles</option><option value="available">Available</option><option value="maintenance">In maintenance</option><option value="offline">Offline</option><option value="hidden">Hidden from customers</option></select></label><p id="fleet-filter-count" aria-live="polite"></p></div>
+          <details class="add-vehicle"><summary>＋ Add a vehicle to the fleet</summary><form id="new-vehicle-form" class="vehicle-form">
+            <label>Make<input name="make" placeholder="Porsche" maxlength="80" required /></label><label>Model<input name="model" placeholder="911 Carrera" maxlength="80" required /></label>
+            <label>Image URL<input name="image" type="url" placeholder="https://…" required /></label><label>Daily rate (£)<input name="pricePerDay" type="number" min="1" step="1" required /></label>
+            <label>Seats<input name="seats" type="number" min="1" max="20" value="5" required /></label><label>Transmission<input name="transmission" placeholder="Automatic" required /></label>
+            <label>Categories<select name="category" required><option value="sport">Sport</option><option value="suv">SUV</option><option value="electric">Electric</option></select></label><label>Service areas<input name="serviceAreas" placeholder="London, Manchester" required /></label>
+            <label>Registration<input name="registrationNumber" maxlength="30" placeholder="LC 01 ABC" /></label><label>Base location<input name="locationLabel" maxlength="80" placeholder="London" /></label>
+            <label class="form-wide">Short description<input name="description" maxlength="600" placeholder="A confident drive for the weekend." required /></label><label>Card highlight<input name="highlight" maxlength="80" placeholder="A true original" required /></label>
+            <label class="form-wide">Vehicle versions (optional JSON)<textarea name="variants" rows="5" placeholder='[{"id":"sport","name":"Sport","design":"Sport trim","pricePerDay":350}]'></textarea><small class="field-hint">Each version needs a unique id, name, design and daily rate. Up to 12.</small></label>
+            <button class="save-vehicle" type="submit">Add vehicle</button>
+          </form></details><div class="fleet-grid" id="fleet-grid"></div><p class="fleet-no-results" id="fleet-filter-empty" hidden>No vehicles match those filters.</p></section>
+        <section class="panel" id="panel-customers"><div class="section-title"><div><h2>Customers</h2><p>Member accounts and rental history.</p></div><span class="pill" id="customer-total">0 customers</span></div><article class="ops-card"><div class="table-wrap"><table><thead><tr><th>NAME</th><th>CONTACT</th><th>HOME CITY</th><th>RESERVATIONS</th><th>BOOKED VALUE</th></tr></thead><tbody id="customers-table"></tbody></table></div></article></section>
+      </main>
+    </div>
+  </body>
+</html>

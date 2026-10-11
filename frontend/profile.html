@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Your profile — Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="site-nav.css" />
+    <script src="profile.js" defer></script>
+    <script src="site-nav.js" defer></script>
+  </head>
+  <body class="account-page profile-page profile-onboarding">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="member-header container" id="site-side-nav"><nav aria-label="Account navigation"><a href="/cars.html">The collection</a><a href="/my-bookings.html">My reservations</a><a class="member-current" href="/profile.html" aria-current="page">My profile</a><button class="quiet-button" type="button" data-logout>Log out ↗</button></nav></header>
+    <button class="site-nav-reopen" id="site-nav-reopen" type="button" aria-controls="site-side-nav" aria-expanded="false" aria-label="Open navigation" hidden><span class="wordmark-icon" aria-hidden="true">L</span></button>
+    <main class="profile-main container" id="main">
+      <section class="profile-card" id="profile-panel" role="dialog" aria-modal="true" aria-labelledby="profile-title">
+        <div class="profile-card-heading">
+          <div class="profile-avatar" id="profile-avatar" aria-hidden="true">L</div>
+          <div class="profile-heading"><p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> YOUR LUX ACCOUNT</p><h1 id="profile-title">Make it <span>personal.</span></h1><p id="profile-subtitle">A few details help us tailor your reservations and delivery.</p></div>
+        </div>
+        <div class="profile-email-row"><span>ACCOUNT EMAIL</span><strong id="profile-email">Loading your account...</strong><span class="profile-email-type">SIGN-IN EMAIL</span></div>
+        <div class="profile-progress"><span>PROFILE COMPLETION</span><progress class="progress-track" id="profile-progress" value="0" max="100" aria-label="Profile completion"></progress><span id="progress-label">3 details</span></div>
+        <form class="profile-form" id="profile-form">
+          <div class="form-section-intro"><span>01</span><div><h2>Personal details</h2><p>Used to coordinate your collection and reservations.</p></div></div>
+          <div class="profile-fields">
+            <label for="profile-name">Full name<input id="profile-name" name="fullName" type="text" autocomplete="name" minlength="2" maxlength="80" placeholder="The name you go by" required /></label>
+            <label for="profile-phone">Phone number<input id="profile-phone" name="phone" type="tel" autocomplete="tel" minlength="8" maxlength="25" placeholder="+44 7700 900000" required /></label>
+            <label for="profile-city">Home city<input id="profile-city" name="city" type="text" autocomplete="address-level2" minlength="2" maxlength="80" placeholder="e.g. London" required /></label>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <div class="profile-actions"><button class="button button-primary account-submit" id="profile-submit" type="submit">Save and continue <span aria-hidden="true">&#8594;</span></button><span class="profile-save-status" id="profile-save-status" role="status" aria-live="polite"></span></div>
+        </form>
+        <p class="privacy-note"><span aria-hidden="true">&#128274;</span> Your details stay private and are only used to support your Lux reservations.</p>
+      </section>
+    </main>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/">MADE FOR THE WAY THERE.</a></footer>
+  </body>
+</html>

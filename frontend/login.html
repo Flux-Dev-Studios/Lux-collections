@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Log in — Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <script src="auth.js" defer></script>
+  </head>
+  <body class="account-page auth-entry-page login-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="account-header container"><a class="wordmark" href="/"><span class="wordmark-icon" aria-hidden="true">L</span><span class="wordmark-text">LUX<span>COLLECTION</span></span></a><a class="account-back" href="/">← Back to the experience</a></header>
+    <main class="account-main" id="main">
+      <section class="account-card" aria-labelledby="account-title">
+        <a class="account-small-link" href="/register.html">NEW TO LUX? <span>JOIN THE COLLECTION ↗</span></a>
+        <p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> A GOOD DRIVE STARTS HERE</p>
+        <h1 id="account-title">Welcome <span>back.</span></h1>
+        <p class="account-intro">Sign in to continue to your collection and reservations.</p>
+        <form class="account-form" id="auth-form" data-mode="login" method="post" action="/api/auth/login">
+          <label for="auth-email">Email address</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required />
+          <div class="password-label"><label for="auth-password">Password</label><a href="/forgot-password.html">Forgot password?</a></div>
+          <div class="password-field"><input id="auth-password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="72" placeholder="At least 8 characters" required /><button class="password-toggle" type="button" data-toggle-password="auth-password" aria-label="Show password" aria-pressed="false">Show</button></div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="button button-primary account-submit" type="submit">Log in to your account <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="account-footnote">Your account and personal details are protected with secure, encrypted sessions.</p>
+      </section>
+      <aside class="account-aside"><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> YOUR COLLECTION, WAITING</p><blockquote>“A little less ordinary starts with a little more personal.”</blockquote><a class="button button-light" href="/register.html">New to Lux? Join us <span aria-hidden="true">↗</span></a></aside>
+    </main>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/">MADE FOR THE WAY THERE.</a></footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f8ff" />
+    <title>Review your drive | Lux Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="design-tokens.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="checkout.css" />
+    <link rel="stylesheet" href="site-nav.css" />
+    <script src="checkout.js?v=20261010-5" defer></script>
+    <script src="site-nav.js" defer></script>
+  </head>
+  <body class="member-page checkout-page site-nav-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="member-header container" id="site-side-nav">
+      <div class="site-nav-brand" aria-hidden="true"><span class="wordmark-text">LUX<span>COLLECTION</span></span></div>
+      <nav aria-label="Account navigation"><a href="/cars.html">The collection</a><a href="/my-bookings.html">My reservations</a><a href="/profile.html">My profile</a><button class="quiet-button" type="button" data-logout>Log out</button></nav>
+    </header>
+    <button class="site-nav-reopen" id="site-nav-reopen" type="button" aria-controls="site-side-nav" aria-expanded="false" aria-label="Open navigation" hidden><span class="wordmark-icon" aria-hidden="true">L</span></button>
+    <main class="checkout-main container" id="main">
+      <div class="checkout-heading">
+        <a class="checkout-back" href="/cars.html">← Back to the collection</a>
+        <p class="eyebrow eyebrow-purple"><span class="eyebrow-line"></span> YOUR NEXT DRIVE</p>
+        <h1>Review your <span id="checkout-car-name">selection.</span></h1>
+        <p>Choose your dates and pick-up point. Your request will be reviewed by our team before anything is confirmed.</p>
+      </div>
+      <div class="checkout-layout">
+        <form class="checkout-form" id="checkout-form">
+          <section class="checkout-section checkout-details-section" id="checkout-details">
+            <button class="checkout-step-toggle" id="checkout-details-toggle" type="button" aria-expanded="true" aria-controls="checkout-fields-panel">
+              <div class="checkout-section-heading"><span>01</span><div class="checkout-step-copy"><strong>Your rental details</strong><small>Tell us when and where you would like to collect the car.</small><small id="checkout-details-summary" hidden></small></div></div>
+              <span class="checkout-step-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="checkout-fields-panel" id="checkout-fields-panel">
+              <div class="checkout-fields">
+                <label>Pick-up date<input id="checkout-from" name="from" type="date" required /></label>
+                <label>Return date<input id="checkout-to" name="to" type="date" required /></label>
+                <label class="checkout-field-wide">Pick-up location<select id="checkout-location" name="location" required></select></label>
+              </div>
+            </div>
+          </section>
+          <section class="checkout-section checkout-review" id="checkout-review" aria-labelledby="checkout-review-title" hidden>
+            <div class="checkout-section-heading"><span>02</span><div><h2 id="checkout-review-title" tabindex="-1">Confirm your request</h2><p>Check these details before sending your reservation request.</p></div></div>
+            <dl class="checkout-review-details">
+              <div><dt>Vehicle</dt><dd id="review-car">—</dd></div><div><dt>Pick-up</dt><dd id="review-from">—</dd></div>
+              <div><dt>Return</dt><dd id="review-to">—</dd></div><div><dt>Pick-up location</dt><dd id="review-location">—</dd></div>
+              <div><dt>Duration</dt><dd id="review-days">—</dd></div><div><dt>Estimated total</dt><dd id="review-total">—</dd></div>
+            </dl>
+            <label class="checkout-confirm"><input id="checkout-confirm" type="checkbox" /> <span>I have checked these details. Continue to choose a vehicle version and design.</span></label>
+            <button class="checkout-edit" id="checkout-edit" type="button">Edit my details</button>
+          </section>
+          <p class="checkout-error form-error" id="checkout-error" role="alert" hidden></p>
+          <a class="checkout-error-back" id="checkout-error-back" href="/cars.html" hidden>Choose a vehicle from the collection →</a>
+          <button class="button button-primary checkout-submit" id="checkout-review-button" type="button" disabled>Review reservation <span aria-hidden="true">?</span></button>
+          <button class="button button-primary checkout-submit" id="checkout-submit" type="button" disabled hidden>Continue to vehicle options <span aria-hidden="true">?</span></button>
+          <p class="checkout-terms">By sending your request, you agree that our team may contact you about this reservation.</p>
+        </form>
+        <aside class="checkout-summary" aria-labelledby="summary-title">
+          <p class="summary-overline">YOUR SELECTION</p>
+          <div class="summary-car" id="summary-car"><div class="summary-placeholder" aria-hidden="true">L</div></div>
+          <div class="summary-car-copy"><p id="summary-make" class="summary-make">Loading your selection</p><h2 id="summary-title">Your vehicle</h2><p id="summary-specs" class="summary-specs"></p></div>
+          <div class="summary-divider"></div>
+          <div class="summary-price"><span>Daily rate</span><strong id="summary-rate">—</strong></div>
+          <div class="summary-price"><span id="summary-days-label">Rental duration</span><strong id="summary-days">—</strong></div>
+          <div class="summary-divider"></div>
+          <div class="summary-total"><span>Estimated total</span><strong id="summary-total">—</strong></div>
+          <p class="summary-note">Final availability and price are confirmed personally by our team.</p>
+          <div class="summary-lock"><span aria-hidden="true">⌑</span> Your details stay private and secure</div>
+        </aside>
+      </div>
+    </main>
+    <footer class="account-footer container"><span>© <span data-current-year></span> LUX COLLECTION</span><a href="/my-bookings.html">YOUR RESERVATIONS →</a></footer>
+  </body>
+</html>
